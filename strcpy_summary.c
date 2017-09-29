@@ -38,6 +38,9 @@ int main() {
       KEEP IN MIND:
       dest of strncpy() will not have a null-terminating character
       if there isn't a null byte in first n bytes of src.
+
+      If length of src < n, strcpy() will write
+      null bytes at the end of dest so n bytes are written.
     */
     char dest2[100];
     strncpy(dest2, src, 11);
